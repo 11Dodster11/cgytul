@@ -1,10 +1,7 @@
-x = float(input("Введите координату x точки: "))
-y = float(input("Введите координату y точки: "))
-radius = float(input("Введите радиус круга: "))
+import random
 
-distance = (x ** 2 + y ** 2) ** 0.5
+numbers = [random.randint(1, 100) for _ in range(10)]
 
-if distance <= radius:
-    print("Точка принадлежит кругу")
-else:
-    print("Точка не принадлежит кругу")
+for i in numbers:
+    if numbers.count(i) > 1:
+        print(i)

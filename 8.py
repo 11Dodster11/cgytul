@@ -1,10 +1,7 @@
-year = int(input("Введите год: "))
+import random
 
-if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
-    print(year, "високосный год")
-    days = 366
-else:
-    print(year, "не високосный год")
-    days = 365
+n = int(input('Введите число: '))
 
-print("Количество дней в году:", days)
+numbers = [random.randint(1, 100) for _ in range(n)]
+
+print(numbers[::2])

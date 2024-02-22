@@ -1,11 +1,12 @@
-x = int(input("Число x: "))
-y = int(input("Число y: "))
+import random
 
-if x > 0 and y > 0:
-	print("1 четверть")
-elif x < 0 and y > 0:
-	print("2 четверть")
-elif x < 0 and y < 0:
-	print("3 четверть")
-elif x > 0 and y < 0:
-	print("4 четверть")
+numbers = [random.randint(1, 101) for _ in range(10)]
+
+sum = 0
+multiply = 1
+
+for i in numbers:
+    sum += i
+    multiply *= i
+
+print(sum, multiply)

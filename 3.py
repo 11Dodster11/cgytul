@@ -1,7 +1,10 @@
-a = int(input("Большее число: "))
-b = int(input("Меньшее число: "))
+import random
 
-if (a % b) == 0:
-	print(f"Число {a} кратно {b}")
+numbers = [random.randint(1, 101) for _ in range(10)]
+
+x = random.randint(1, 101)
+
+if x in numbers:
+    print(numbers.index(x))
 else:
-	print(f"Число {a} не кратно {b}, остаток от деления равен {a % b}")
+    print('-1')

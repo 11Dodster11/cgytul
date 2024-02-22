@@ -1,12 +1,5 @@
-a = int(input("Сторона a: "))
-b = int(input("Сторона b: "))
-c = int(input("Сторона c: "))
+import random
 
-if (a + b) < c:
-	print("Треугольник не существует.")
-elif (a + c) < b:
-	print("Треугольник не существует.")
-elif (c + b) < a:
-	print("Треугольник не существует.")
-else:
-	print("Треугольник существует.")
+numbers = [random.randint(1, 100) for _ in range(10)]
+
+print(max(numbers))

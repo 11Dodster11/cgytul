@@ -1,16 +1,12 @@
-import math
-figure = input("Введите фигуру: ")
-a = 0
-b = 0
-c = 0
-if figure == "Прямоугольник":
-	a = int(input("Введите сторону a: "))
-	b = int(input("Введите сторону b: "))
-	print("Площадь прямоугольника равна ",(a * b))
-elif figure == "Круг":
-	a = int(input("Введите радиус круга: "))
-	print("Площадь круга равна ", (math.pi * (a ** 2)))
-elif figure == "Треугольник":
-	a = int(input("Введите основание треугольника "))
-	b = int(input("Введите высоту треугольника "))
-	print("Площадь треугольника равна ",((a * b) / 2))
+import random
+
+rl = [random.randint(1, 100) for _ in range(10)]
+
+print("первый список:", rl)
+
+maxt = rl.index(max(rl))
+mint = rl.index(min(rl))
+
+rl[maxt], rl[mint] = rl[mint], rl[maxt]
+
+print("второй список:", rl)
