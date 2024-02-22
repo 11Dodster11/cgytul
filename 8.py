@@ -1,7 +1,10 @@
-import random
-
-n = int(input('Введите число: '))
-
-numbers = [random.randint(1, 100) for _ in range(n)]
-
-print(numbers[::2])
+n = int(input())
+d = 0
+di = 1
+while n > 0:
+    dig = n % 10
+    d += dig
+    di *= dig
+    n //= 10
+print("Сумма:", d)
+print("Произведение:", di)

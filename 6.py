@@ -1,7 +1,5 @@
-import random
-
-numbers = [random.randint(1, 100) for _ in range(10)]
-
-for i in numbers:
-    if numbers.count(i) > 1:
-        print(i)
+n = int(input())
+while n > 0:
+    digit = n % 10
+    print(digit, end=' ')
+    n //= 10

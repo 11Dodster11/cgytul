@@ -1,5 +1,7 @@
-import random
-
-numbers = [random.randint(1, 100) for _ in range(10)]
-
-print(max(numbers))
+N = int(input())
+a, b = 0, 1
+for _ in range(N):
+    print(a, end=' ')
+    ne = a + b
+    a = b
+    b = ne
